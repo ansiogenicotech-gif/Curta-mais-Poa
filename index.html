@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Curta+Poa</title>
+<meta name="theme-color" content="#060a22">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Curta+Poa">
+<style>
+:root{color-scheme:dark;--ink:#eef2ff;--mut:#9aa6d1;--bg:#060a22;--card:rgba(255,255,255,.055);--line:rgba(255,255,255,.12);--ind:#2a2f7a;--co:#ff4f9a;--am:#ffc15e;--te:#3de6ff;--tl:rgba(61,230,255,.14);--cl:rgba(255,79,154,.16)}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg)}
+body{color:var(--ink);font-family:"Avenir Next","Segoe UI",system-ui,Helvetica,Arial,sans-serif;line-height:1.45;min-height:100vh;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px));background:radial-gradient(900px 500px at 85% -5%,rgba(255,79,154,.28),transparent 60%),radial-gradient(800px 500px at -10% 20%,rgba(61,230,255,.16),transparent 60%),linear-gradient(180deg,#0b1140 0%,#060a22 55%)}
+.w{max-width:720px;margin:0 auto;padding:0 16px}
+.hero{position:relative;overflow:hidden;padding:calc(22px + env(safe-area-inset-top,0px)) 0 30px}
+.hero .w{position:relative;z-index:1}
+.orb{position:absolute;right:-50px;top:-6px;width:370px;opacity:.95;filter:drop-shadow(0 0 34px rgba(255,79,154,.45));z-index:0}
+.sun{animation:fl 7s ease-in-out infinite alternate}@keyframes fl{to{transform:translateY(-7px)}}
+.logo{font-weight:900;font-size:21px;letter-spacing:.01em}.logo b{color:var(--te);font-size:25px;text-shadow:0 0 14px var(--te)}
+.hero h1{font-size:34px;line-height:1.05;font-weight:900;margin:22px 0 8px;letter-spacing:-.025em;max-width:300px;text-shadow:0 2px 24px #060a22}
+.hero p{color:#c9d2f5;font-size:15px;max-width:290px;text-shadow:0 2px 16px #060a22}
+.sun2{display:flex;gap:8px;margin-top:70px;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);padding:8px 12px;border-radius:14px;font-weight:700;font-size:14px}
+h2{font-size:20px;font-weight:800;margin:24px 0 10px;letter-spacing:-.01em}
+.card{background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:20px;padding:16px;margin-bottom:12px}
+.btn{font:inherit;font-weight:800;border:1px solid var(--line);background:rgba(255,255,255,.07);color:var(--ink);border-radius:14px;padding:11px 16px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.btn.p{background:linear-gradient(90deg,#3de6ff,#a78bfa 55%,#ff4f9a);border:0;color:#060a22;box-shadow:0 6px 28px rgba(167,139,250,.45)}
+.btn.t{background:var(--tl);border-color:rgba(61,230,255,.5);color:#c9f8ff}
+.btn.s{padding:8px 12px;font-size:14px}
+.btn:active{transform:scale(.97)}.btn:focus-visible,.opt:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--te);outline-offset:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1 1 auto}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:inherit;font-weight:700;font-size:15px;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);cursor:pointer}
+.opt.on{background:rgba(61,230,255,.16);border-color:var(--te);color:#fff;box-shadow:0 0 16px rgba(61,230,255,.35)}
+label.l{display:block;font-weight:800;font-size:13px;margin:16px 0 8px;color:var(--mut)}
+input,select{font:inherit;width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.07);color:var(--ink)}
+select option{color:#111}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:16px;padding:4px}
+.seg button{font:inherit;font-weight:800;border:0;background:none;color:var(--mut);padding:11px;border-radius:12px;cursor:pointer}
+.seg button.on{background:linear-gradient(90deg,rgba(61,230,255,.25),rgba(255,79,154,.25));color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.big{display:flex;align-items:center;justify-content:center;gap:18px;margin:16px 0 6px}
+.big button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:var(--ink);font-size:26px;font-weight:800;cursor:pointer}
+.big div{text-align:center;min-width:130px}
+.big b{display:block;font-size:76px;line-height:1;font-weight:900;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#fff,#3de6ff 55%,#ff4f9a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.big span{font-weight:800;color:var(--mut);font-size:15px}
+input[type=range]{-webkit-appearance:none;appearance:none;height:8px;padding:0;border:0;border-radius:99px;background:linear-gradient(90deg,var(--te),var(--co));outline-offset:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(61,230,255,.35),0 0 18px var(--te)}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 5px rgba(61,230,255,.35)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.day{font-size:19px;font-weight:900;margin:22px 0 10px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.day small{font-weight:700;color:var(--mut);font-size:13px;text-align:right}
+.stop{border-left:3px solid var(--te);box-shadow:-8px 0 24px -12px rgba(61,230,255,.6)}
+.slot{font-weight:800;font-size:13px;color:var(--te);font-variant-numeric:tabular-nums}
+.stop h3{font-size:18px;margin:2px 0}
+.meta{font-size:13px;color:var(--mut);font-weight:600;margin:4px 0 8px}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;background:var(--tl);color:#a9f2ff;font-weight:800;font-size:12px;margin-right:4px;border:1px solid rgba(61,230,255,.3)}
+.pill.c{background:var(--cl);color:#ffb3d3;border-color:rgba(255,79,154,.35)}
+nav{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));max-width:700px;margin:0 auto;background:rgba(14,20,64,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:22px;display:grid;grid-template-columns:repeat(5,1fr);padding:6px 4px;z-index:9;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+nav button{font:inherit;border:0;background:none;padding:6px 2px;font-size:11px;font-weight:800;color:var(--mut);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav button span{font-size:21px}nav button.on{color:var(--te);text-shadow:0 0 12px var(--te)}
+.fc{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}.fc div{flex:none;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px;font-size:13px;font-weight:700;min-width:72px}
+.fc b{display:block;font-size:22px}
+.sw{background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:26px;padding:22px;text-align:center}
+.sw .av{width:84px;height:84px;border-radius:50%;margin:0 auto 10px;background:linear-gradient(135deg,var(--te),var(--co));display:flex;align-items:center;justify-content:center;font-size:36px;color:#060a22;font-weight:900;box-shadow:0 0 30px rgba(255,79,154,.5)}
+.sw h3{font-size:22px}.acts{display:flex;gap:16px;justify-content:center;margin-top:18px}
+.acts button{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);font-size:28px;cursor:pointer;background:rgba(255,255,255,.09)}
+.vou{border:1px dashed var(--co);background:var(--cl);border-radius:14px;padding:12px;margin-top:10px;font-weight:700}
+.warn{background:rgba(255,193,94,.12);border:1px solid rgba(255,193,94,.4);color:#ffe2ac;border-radius:12px;padding:10px 12px;font-size:13px;font-weight:600;margin:10px 0}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}*{transition:none!important}}
+</style></head><body>
+<div class="hero"><svg class="orb" viewBox="0 0 320 260" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc15e"/><stop offset=".55" stop-color="#ff4f9a"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient><mask id="sm"><rect width="320" height="260" fill="#fff"/><rect y="140" width="320" height="4" fill="#000"/><rect y="158" width="320" height="6" fill="#000"/><rect y="178" width="320" height="8" fill="#000"/><rect y="200" width="320" height="11" fill="#000"/></mask></defs><circle class="sun" cx="190" cy="120" r="96" fill="url(#sg)" mask="url(#sm)"/><g stroke="#3de6ff" fill="none" stroke-width="1.5"><path opacity=".8" d="M0 220q40-10 80 0t80 0t80 0t80 0"/><path opacity=".5" d="M0 234q40-10 80 0t80 0t80 0t80 0"/><path opacity=".3" d="M0 248q40-10 80 0t80 0t80 0t80 0"/></g></svg><div class="w">
+ <div class="logo">Curta<b>+</b>Poa</div>
+ <h1>Porto Alegre, no seu tempo.</h1>
+ <p>Diga quanto tempo você tem. A gente monta o resto.</p>
+ <div class="sun2" id="hS"></div>
+</div></div>
+<main class="w" id="app"></main>
+<nav id="nav"></nav>
+<script>
+const $=i=>document.getElementById(i);const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const INT=['Culinária','Cultura','Museus','Teatro','Compras','Natureza','Noite','Esportes'];
+// [id,nome,categoria,bairro,horas,custo(0-3),interno(1/0),turnos(m,l,a,n),descrição]
+const P=[
+['mp','Mercado Público','Culinária','Centro',1.5,1,1,'ml','Mercado histórico: almoce no Gambrinus e prove o cafezinho e as especiarias.'],
+['pa','Praça da Alfândega','Cultura','Centro',1,0,0,'ma','Coração cultural do Centro Histórico, cercada de museus e prédios antigos.'],
+['mg','MARGS','Museus','Centro',1.5,0,1,'ma','Museu de Arte do Rio Grande do Sul, com acervo de arte gaúcha e brasileira.'],
+['mr','Memorial do Rio Grande do Sul','Museus','Centro',1.5,0,1,'ma','Conta a história e a cultura gaúcha em um prédio histórico.'],
+['fs','Farol Santander','Cultura','Centro',1.5,1,1,'ma','Centro cultural em prédio icônico, com mirante e exposições.'],
+['jc','Museu Júlio de Castilhos','Museus','Centro',1.5,0,1,'ma','Um dos museus mais antigos do estado, com acervo histórico gaúcho.'],
+['ts','Theatro São Pedro','Teatro','Centro',2,2,1,'an','Teatro histórico de Porto Alegre. Confira a programação antes de ir.'],
+['cm','Casa de Cultura Mario Quintana','Cultura','Centro',2,0,1,'am','Antigo hotel que virou centro cultural, com cinema, livraria e café.'],
+['cp','Catedral e Palácio Piratini','Cultura','Centro',1,0,0,'m','Caminhada pela Praça da Matriz e pelos prédios do poder gaúcho.'],
+['ra','Rua dos Andradas (Rua da Praia)','Compras','Centro',2,1,0,'ma','Calçadão histórico com lojas, livrarias e cafés.'],
+['ug','Usina do Gasômetro','Cultura','Orla',2,0,1,'an','Centro cultural à beira do Guaíba, famoso pelo pôr do sol.'],
+['og','Orla do Guaíba','Natureza','Orla',2,0,0,'an','Caminhe ou pedale na orla com vista do Guaíba.'],
+['ce','Cais Embarcadero','Noite','Orla',2.5,2,0,'n','Bares e restaurantes à beira do rio, bom para o fim do dia.'],
+['cmu','Cais Mauá','Cultura','Orla',1.5,0,0,'an','Antigos armazéns do porto, com espaços de eventos e passeio.'],
+['pm','Parque Marinha do Brasil','Esportes','Orla',2,0,0,'ma','Parque amplo para caminhar, pedalar e tomar chimarrão.'],
+['pf','Parque Farroupilha (Redenção)','Natureza','Bom Fim',2,0,0,'ma','O parque mais querido da cidade, com lago, chafariz e sombra.'],
+['br','Brique da Redenção (domingos)','Compras','Bom Fim',2.5,1,0,'m','Feira de antiguidades e artesanato aos domingos.'],
+['bo','Bar Ocidente','Noite','Bom Fim',2.5,2,1,'n','Bar tradicional do Bom Fim, com música ao vivo e boemia.'],
+['av','Auditório Araújo Vianna','Teatro','Bom Fim',2.5,2,0,'n','Casa de shows ao ar livre no Parque Farroupilha. Veja a agenda.'],
+['cb','Bares da Cidade Baixa','Noite','Cidade Baixa',3,2,1,'n','Ruas República e João Alfredo, o polo boêmio da cidade.'],
+['pc','Parcão (Parque Moinhos de Vento)','Natureza','Moinhos',1.5,0,0,'ma','Parque charmoso no bairro Moinhos de Vento, ótimo para um café.'],
+['pad','Rua Padre Chagas','Culinária','Moinhos',2,2,1,'ln','Restaurantes, cafés e bares em um dos bairros mais elegantes.'],
+['ig','Shopping Iguatemi','Compras','Moinhos',2.5,2,1,'al','Compras e cinema, bom para dias de chuva.'],
+['ib','Fundação Iberê Camargo','Museus','Zona Sul',2,1,1,'ma','Museu de arquitetura marcante, às margens do Guaíba.'],
+['pe','Pontal do Estaleiro','Compras','Zona Sul',2.5,2,1,'aln','Shopping com deck sobre o Guaíba, bom para o pôr do sol.'],
+['jb','Jardim Botânico','Natureza','Zona Sul',2,1,0,'ma','Grande área verde para uma manhã tranquila.'],
+['ip','Orla de Ipanema','Natureza','Zona Sul',2,0,0,'an','Pôr do sol, chimarrão e vida ao ar livre na Zona Sul.'],
+['ag','Arena do Grêmio (tour)','Esportes','Zona Norte',2.5,2,1,'ma','Tour pelo estádio e pelo museu do Grêmio. Confirme horários.'],
+['bi','Beira-Rio e Museu do Inter','Esportes','Praia de Belas',2.5,2,1,'ma','Estádio do Internacional com museu e tour. Confirme horários.'],
+['pu','Museu de Ciências e Tecnologia (PUCRS)','Museus','Partenon',2.5,2,1,'ma','Museu interativo, bom para famílias e dias de chuva.'],
+['ch','Churrasco gaúcho (rodízio)','Culinária','Centro',2,3,1,'ln','Experimente o churrasco, símbolo da cultura gaúcha, em uma churrascaria.'],
+['rn','Renascença: teatro e shows','Teatro','Praia de Belas',2.5,2,1,'n','Teatro com peças e shows. Confira a programação.']
+];
+const PM=Object.fromEntries(P.map(p=>[p[0],{id:p[0],n:p[1],c:p[2],b:p[3],h:p[4],$:p[5],i:p[6],s:p[7],d:p[8]}]));
+const EV=[
+{n:'Brique da Redenção',d:[0],h:'Domingo, manhã',l:'Parque Farroupilha',t:'Antiguidades, artesanato e comidinhas.'},
+{n:'Feira Ecológica da Redenção',d:[6],h:'Sábado, manhã',l:'Av. José Bonifácio',t:'Orgânicos, pães e produtos coloniais.'},
+{n:'Pôr do sol no Guaíba',d:'*',h:'Todo dia',l:'Usina do Gasômetro, Orla',t:'Um dos programas mais tradicionais da cidade.'},
+{n:'Bares e música na Cidade Baixa',d:[4,5,6],h:'Quinta a sábado, noite',l:'Cidade Baixa',t:'Rodas de samba, rock e bares lotados.'},
+{n:'Feira do Livro de Porto Alegre',d:'T',h:'Geralmente entre fim de outubro e novembro',l:'Praça da Alfândega',t:'Evento tradicional. Confirme as datas deste ano.'},
+{n:'Orquestra e teatros',d:'T',h:'Temporada',l:'Theatro São Pedro e outros',t:'Veja a programação antes de ir.'}
+];
+const PERF=[
+{n:'Marina',c:'Curitiba',b:'Chegando de ônibus na rodoviária, curto museus e café.',i:['Museus','Cultura','Culinária']},
+{n:'Rafael',c:'São Paulo',b:'Conexão longa no aeroporto, quero conhecer o Centro.',i:['Culinária','Noite','Compras']},
+{n:'Camila',c:'Montevidéu',b:'Primeira vez na cidade. Adoro teatro e arte.',i:['Teatro','Cultura','Museus']},
+{n:'Diego',c:'Florianópolis',b:'Fim de semana para pedalar na orla e ver o pôr do sol.',i:['Natureza','Esportes','Noite']},
+{n:'Luana',c:'Brasília',b:'Aproveitando a folga do evento para conhecer a cultura gaúcha.',i:['Cultura','Culinária','Natureza']},
+{n:'Thiago',c:'Caxias do Sul',b:'Vim torcer e quero conhecer os estádios e a noite.',i:['Esportes','Noite','Culinária']}
+];
+const PARC=['Café parceiro: 10% de desconto','Livraria parceira: brinde na compra','Restaurante parceiro: sobremesa cortesia','Bar parceiro: drink de boas-vindas','Loja parceira: 10% em artesanato'];
+let S={i:[],md:'d',n:1,t0:'09:00',t1:'22:00',b:3,c:'',nome:'',r:null,m:[],v:0};
+try{S={...S,...JSON.parse(localStorage.getItem('cmp2')||'{}')}}catch(e){}
+const save=()=>{try{localStorage.setItem('cmp2',JSON.stringify(S))}catch(e){}};
+let W=null,tab='home',deck=0,nowMatch=null;
+const WC=c=>c==0?['☀️','Céu limpo']:c<=2?['🌤️','Parcialmente nublado']:c==3?['☁️','Nublado']:c<=48?['🌫️','Neblina']:c<=57?['🌦️','Garoa']:c<=67?['🌧️','Chuva']:c<=77?['🌨️','Frio intenso']:c<=82?['🌦️','Pancadas de chuva']:c<=99?['⛈️','Tempestade']:['☁️',''];
+const DW=['dom','seg','ter','qua','qui','sex','sáb'];
+async function loadW(){try{const r=await fetch('https://api.open-meteo.com/v1/forecast?latitude=-30.03&longitude=-51.22&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunset&timezone=America%2FSao_Paulo&forecast_days=7');W=await r.json();hero();render()}catch(e){}}
+function hero(){if(!W||!W.current)return;const w=WC(W.current.weather_code),ss=(W.daily.sunset[0]||'').slice(11,16);
+ $('hS').innerHTML='<span class="chip">'+w[0]+' '+Math.round(W.current.temperature_2m)+'°C em Porto Alegre</span>'+(ss?'<span class="chip">🌇 Pôr do sol às '+ss+'</span>':'')}
+function go(t){tab=t;render();scrollTo({top:0})}
+function nav(){const T=[['home','🏠','Início'],['rot','🧭','Roteiro'],['mob','🚌','Mobilidade'],['con','💞','Conectar'],['eve','📅','Eventos']];
+ $('nav').innerHTML=T.map(t=>'<button class="'+(tab==t[0]?'on':'')+'" data-t="'+t[0]+'"><span>'+t[1]+'</span>'+t[2]+'</button>').join('');
+ $('nav').querySelectorAll('button').forEach(b=>b.onclick=()=>go(b.dataset.t))}
+const maps=(q,m)=>'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q+', Porto Alegre, RS')+(m?'&travelmode='+m:'');
+const todayEv=()=>{const d=new Date().getDay();return EV.filter(e=>e.d=='*'||(Array.isArray(e.d)&&e.d.includes(d)))};
+function render(){nav();const A=$('app');({home,rot,mob,con,eve})[tab](A)}
+function home(A){
+ let f='';if(W&&W.daily)f='<h2>Previsão da semana</h2><div class="fc">'+W.daily.time.map((t,i)=>{const w=WC(W.daily.weather_code[i]);return '<div>'+DW[new Date(t+'T12:00').getDay()]+'<b>'+w[0]+'</b>'+Math.round(W.daily.temperature_2m_max[i])+'° / '+Math.round(W.daily.temperature_2m_min[i])+'°<br><small>💧'+W.daily.precipitation_probability_max[i]+'%</small></div>'}).join('')+'</div>';
+ else f='<div class="warn">Previsão do tempo indisponível agora. Conecte-se à internet para ver o clima de Porto Alegre.</div>';
+ A.innerHTML='<h2>Por onde começar?</h2><div class="card"><div class="row"><button class="btn p" data-g="rot">🧭 Montar meu roteiro</button><button class="btn t" data-g="con">💞 Achar companhia</button></div></div>'
+ +'<div class="card"><b>Acabou de chegar?</b><div class="row" style="margin-top:10px"><button class="btn" data-c="aero">✈️ Aeroporto</button><button class="btn" data-c="rod">🚌 Rodoviária</button><button class="btn" data-c="cen">🏨 Já estou no Centro</button></div></div>'
+ +'<h2>Acontece hoje</h2>'+todayEv().map(e=>'<div class="card"><b>'+E(e.n)+'</b><div class="meta">'+E(e.h)+' • '+E(e.l)+'</div>'+E(e.t)+'</div>').join('')+f;
+ A.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>go(b.dataset.g));
+ A.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.c=b.dataset.c;save();go('mob')});
+}
+const KL={m:'Manhã',l:'Almoço',a:'Tarde',n:'Noite'};
+const SL=t=>t<690?'m':t<870?'l':t<1110?'a':'n';
+const fmt=m=>{m=Math.round(m);return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0')};
+const tm=v=>{const a=(v||'09:00').split(':');return +a[0]*60+ +a[1]};
+const unit=()=>S.md=='h'?(S.n==1?'hora':'horas'):(S.n==1?'dia':'dias');
+const MX=()=>S.md=='h'?16:14;
+function score(p,k,used,area,rain,all){let s=S.i.includes(p.c)?4:(S.i.length?0:1.5);if(!p.s.includes(k))s-=5;if(k=='l'&&p.c=='Culinária')s+=3;
+ if(p.b==area)s+=1.5;if(rain){s+=p.i?2:-2}if(p.$>S.b)s-=6;if(used.has(p.id))s-=99;if(all&&all.has(p.id))s-=6;return s+Math.random()*.8}
+function gen(){const nd=S.md=='h'?1:S.n,all=new Set(),days=[];
+ for(let d=0;d<nd;d++){const rain=!!(W&&W.daily&&W.daily.precipitation_probability_max[d]>60);
+  const st=tm(S.t0),en=S.md=='h'?st+S.n*60:Math.max(tm(S.t1),st+90);let t=st,area=S.c?'Centro':'';const day=new Set(),it=[];
+  while(it.length<12&&en-t>=45){const k=SL(t),rem=en-t;
+   const c=Object.values(PM).map(p=>[score(p,k,day,area,rain,all),p]).sort((x,y)=>y[0]-x[0])[0];
+   if(c[0]<-12)break;const p=c[1],dur=Math.max(45,Math.round(Math.min(p.h*60,rem)/15)*15);
+   it.push({id:p.id,s:t,e:t+dur,k});day.add(p.id);all.add(p.id);area=p.b;t+=dur+20}
+  days.push({rain,it})}
+ S.r={md:S.md,n:S.n,days};save()}
+function swap(di,si){const day=S.r.days[di],o=day.it[si],used=new Set(day.it.map(x=>x.id)),area=PM[o.id].b;
+ const c=Object.values(PM).filter(p=>p.id!=o.id).map(p=>[score(p,o.k,used,area,day.rain,null),p]).sort((x,y)=>y[0]-x[0])[0][1];o.id=c.id;save();render()}
+function shareTxt(){return 'Meu roteiro Curta+Poa\n'+S.r.days.map((d,i)=>(S.r.days.length>1?'Dia '+(i+1)+'\n':'')+d.it.map(x=>'• '+fmt(x.s)+' '+PM[x.id].n).join('\n')).join('\n')}
+function rot(A){
+ const o=(arr,cur,k)=>arr.map(a=>'<button class="opt'+(cur(a[0])?' on':'')+'" data-'+k+'="'+a[0]+'">'+a[1]+'</button>').join('');
+ const pre=(S.md=='h'?[1,2,4,6,8,12]:[1,2,3,5,7,10]).map(v=>[v,v+(S.md=='h'?'h':(v==1?' dia':' dias'))]);
+ let h='<h2>Quanto tempo você tem?</h2><div class="card"><div class="seg"><button data-md="h" class="'+(S.md=='h'?'on':'')+'">⏱ Horas</button><button data-md="d" class="'+(S.md=='d'?'on':'')+'">📆 Dias</button></div>'
+ +'<div class="big"><button id="bm" aria-label="Menos">−</button><div><b id="val">'+S.n+'</b><span id="un">'+unit()+'</span></div><button id="bp" aria-label="Mais">+</button></div>'
+ +'<input type="range" id="rg" min="1" max="'+MX()+'" value="'+S.n+'" aria-label="Tempo disponível"><div class="opts" style="margin-top:14px;justify-content:center">'+o(pre,k=>S.n==k,'pn')+'</div>'
+ +(S.md=='h'?'<label class="l">Começa às</label><input type="time" id="t0" value="'+S.t0+'"><div class="meta" id="eh" style="margin-top:8px"></div>':'<div class="two"><div><label class="l">Começa às</label><input type="time" id="t0" value="'+S.t0+'"></div><div><label class="l">Termina às</label><input type="time" id="t1" value="'+S.t1+'"></div></div>')+'</div>'
+ +'<h2>Seu perfil</h2><div class="card"><label class="l" style="margin-top:0">O que você curte? (escolha vários)</label><div class="opts">'+INT.map(i=>'<button class="opt'+(S.i.includes(i)?' on':'')+'" data-i="'+i+'">'+i+'</button>').join('')+'</div>'
+ +'<label class="l">Quanto quer gastar por passeio?</label><div class="opts">'+o([[0,'Só grátis'],[1,'Econômico'],[2,'Moderado'],[3,'Sem limite']],k=>S.b==k,'b')+'</div>'
+ +'<label class="l">De onde você sai?</label><div class="opts">'+o([['aero','✈️ Aeroporto'],['rod','🚌 Rodoviária'],['cen','🏨 Centro/Hotel']],k=>S.c==k,'c')+'</div>'
+ +'<div style="margin-top:20px"><button class="btn p" id="bG" style="width:100%;font-size:17px;padding:14px">✨ Criar meu roteiro</button></div></div>';
+ if(S.r){h+='<h2>Seu roteiro</h2>';if(!S.r.days.some(d=>d.it.length))h+='<div class="warn">O tempo escolhido é curto demais. Aumente as horas ou os dias.</div>';
+  S.r.days.forEach((d,di)=>{h+='<div class="day"><span>'+(S.r.days.length>1?'Dia '+(di+1):(S.r.md=='h'?S.r.n+'h de passeio':'1 dia'))+'</span><small>'+(d.rain?'🌧️ chuva prevista: priorizei lugares cobertos':'')+'</small></div>';
+  d.it.forEach((x,si)=>{const p=PM[x.id];h+='<div class="card stop"><div class="slot">'+fmt(x.s)+' – '+fmt(x.e)+' • '+KL[x.k]+'</div><h3>'+E(p.n)+'</h3><div class="meta">📍 '+E(p.b)+' • '+(p.$?'$'.repeat(p.$):'Grátis')+'</div><div style="margin-bottom:10px">'+E(p.d)+'</div><span class="pill">'+p.c+'</span><span class="pill c">'+(p.i?'Coberto':'Ao ar livre')+'</span><div class="row" style="margin-top:12px"><a class="btn s t" target="_blank" rel="noopener" href="'+maps(p.n)+'">Como chegar</a><button class="btn s" data-sw="'+di+','+si+'">🔄 Trocar</button></div></div>'})});
+  if(S.r.n>5&&S.r.md=='d')h+='<div class="warn">Em roteiros longos alguns lugares se repetem. Aproveite para explorar com calma.</div>';
+  h+='<div class="row"><button class="btn" id="bS">📤 Compartilhar roteiro</button><button class="btn" id="bX">Limpar</button></div>'}
+ A.innerHTML=h;
+ const eh=()=>{if($('eh'))$('eh').textContent='Termina por volta das '+fmt(tm(S.t0)+S.n*60)};
+ const setN=v=>{v=Math.max(1,Math.min(MX(),+v||1));S.n=v;save();$('val').textContent=v;$('un').textContent=unit();$('rg').value=v;eh();A.querySelectorAll('[data-pn]').forEach(b=>b.classList.toggle('on',+b.dataset.pn==v))};
+ eh();
+ A.querySelectorAll('[data-md]').forEach(b=>b.onclick=()=>{S.md=b.dataset.md;S.n=S.md=='h'?4:1;save();rot(A)});
+ $('bm').onclick=()=>setN(S.n-1);$('bp').onclick=()=>setN(S.n+1);$('rg').oninput=e=>setN(e.target.value);
+ A.querySelectorAll('[data-pn]').forEach(b=>b.onclick=()=>setN(b.dataset.pn));
+ $('t0').onchange=e=>{S.t0=e.target.value||'09:00';save();eh()};if($('t1'))$('t1').onchange=e=>{S.t1=e.target.value||'22:00';save()};
+ A.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>{const i=b.dataset.i;S.i=S.i.includes(i)?S.i.filter(x=>x!=i):[...S.i,i];save();b.classList.toggle('on')});
+ A.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{S.b=+b.dataset.b;save();rot(A)});
+ A.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.c=b.dataset.c;save();rot(A)});
+ $('bG').onclick=()=>{gen();rot(A);setTimeout(()=>{const d=A.querySelector('.day');d&&d.scrollIntoView({behavior:'smooth'})},50)};
+ A.querySelectorAll('[data-sw]').forEach(b=>b.onclick=()=>{const q=b.dataset.sw.split(',');swap(+q[0],+q[1])});
+ if($('bS'))$('bS').onclick=async()=>{const t=shareTxt();try{if(navigator.share)await navigator.share({text:t});else{await navigator.clipboard.writeText(t);alert('Roteiro copiado!')}}catch(e){}};
+ if($('bX'))$('bX').onclick=()=>{S.r=null;save();rot(A)};
+}
+function mob(A){
+ const tip={aero:'<b>✈️ Saindo do Aeroporto Salgado Filho</b><br>O Trensurb liga o aeroporto ao Centro (estação Mercado) em cerca de 20 a 25 minutos, com parada na Rodoviária. Táxi e apps também saem do desembarque.',rod:'<b>🚌 Saindo da Rodoviária</b><br>A estação do Trensurb fica perto e leva ao Centro em poucos minutos. Táxi e apps são alternativas, principalmente com bagagem.',cen:'<b>🏨 No Centro</b><br>Muitos pontos turísticos ficam a pé: Mercado Público, Praça da Alfândega, Usina do Gasômetro e Cais Mauá.'}[S.c]||'<b>Escolha de onde você sai</b> na aba Roteiro ou na tela inicial para ver dicas personalizadas.';
+ const L=(u,e,t,s)=>'<a class="card" style="display:block;color:inherit;text-decoration:none" target="_blank" rel="noopener" href="'+u+'"><b>'+e+' '+t+'</b><div class="meta" style="margin:2px 0 0">'+s+'</div></a>';
+ A.innerHTML='<h2>Como se locomover</h2><div class="card" style="border-left:6px solid var(--co)">'+tip+'</div>'
+ +'<h2>Traçar rota</h2><div class="card"><label class="l" style="margin-top:0">Para onde você vai?</label><select id="mD">'+Object.values(PM).map(p=>'<option value="'+E(p.n)+'">'+E(p.n)+'</option>').join('')+'</select><div class="row" style="margin-top:12px"><button class="btn t" data-m="driving">🚗 Carro/App</button><button class="btn t" data-m="transit">🚌 Ônibus/Trem</button><button class="btn t" data-m="walking">🚶 A pé</button><button class="btn t" data-m="bicycling">🚲 Bike</button></div></div>'
+ +'<h2>Chamar transporte</h2>'+L('https://m.uber.com/','🚕','Uber','Abrir o app ou site')+L('https://99app.com/','🚖','99','Abrir o app ou site')+L('https://www.trensurb.gov.br/','🚆','Trensurb','Horários e estações')+L('https://eptc.portoalegre.rs.gov.br/','🚌','Ônibus e lotação (EPTC)','Informações oficiais de transporte')+L('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('patinete compartilhado Porto Alegre'),'🛴','Patinetes e bicicletas compartilhadas','Veja o que há perto de você no mapa');
+ A.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>open(maps($('mD').value,b.dataset.m),'_blank'));
+}
+function common(a,b){return a.filter(x=>b.includes(x))}
+function con(A){
+ let h='<h2>Conectar</h2><div class="warn">Protótipo: os perfis e benefícios abaixo são de demonstração. Para ligar pessoas reais é preciso um servidor. Encontre sempre em locais públicos.</div>';
+ h+='<div class="card"><label class="l" style="margin-top:0">Seu nome</label><input id="nm" value="'+E(S.nome)+'" placeholder="Como quer ser chamado?"><div class="meta" style="margin-top:8px">Seus interesses vêm da aba Roteiro: <b>'+(S.i.join(', ')||'nenhum ainda')+'</b></div></div>';
+ const q=PERF.filter(p=>common(S.i,p.i).length);
+ if(nowMatch){const p=nowMatch,cm=common(S.i,p.i),rt=Object.values(PM).filter(x=>cm.includes(x.c)).slice(0,4);
+  h+='<div class="sw"><div class="av">💞</div><h3>Deu match com '+E(p.n)+'!</h3><div class="meta">Interesses em comum: '+cm.join(', ')+'</div><div style="text-align:left;margin-top:10px"><b>Rota em dupla sugerida</b><br>'+rt.map(x=>'• '+E(x.n)).join('<br>')+'</div><div class="vou">🎁 '+PARC[S.v%PARC.length]+'<br><small>Código: POA-'+(1000+S.m.length*37)+' (exemplo)</small></div><button class="btn p" id="bK" style="margin-top:14px">Continuar</button></div>'}
+ else if(!S.i.length)h+='<div class="card">Escolha seus interesses na aba Roteiro para ver pessoas com gostos parecidos.</div>';
+ else if(!q.length)h+='<div class="card">Ninguém com esses interesses por enquanto. Tente marcar mais opções.</div>';
+ else{const p=q[deck%q.length],cm=common(S.i,p.i);h+='<div class="sw"><div class="av">'+E(p.n[0])+'</div><h3>'+E(p.n)+'</h3><div class="meta">Vem de '+E(p.c)+'</div><p>'+E(p.b)+'</p><div style="margin-top:10px">'+p.i.map(i=>'<span class="pill'+(cm.includes(i)?'':' c')+'">'+i+'</span>').join('')+'</div><div class="meta" style="margin-top:8px">'+cm.length+' interesse(s) em comum</div><div class="acts"><button id="bN" aria-label="Passar">✖️</button><button id="bY" aria-label="Curtir">💚</button></div></div>'}
+ if(S.m.length)h+='<h2>Seus matches</h2>'+S.m.map(n=>'<div class="card">💞 <b>'+E(n)+'</b></div>').join('');
+ A.innerHTML=h;
+ $('nm').oninput=e=>{S.nome=e.target.value;save()};
+ if($('bN'))$('bN').onclick=()=>{deck++;con(A)};
+ if($('bY'))$('bY').onclick=()=>{const p=q[deck%q.length];if(!S.m.includes(p.n))S.m.push(p.n);S.v++;save();nowMatch=p;deck++;con(A)};
+ if($('bK'))$('bK').onclick=()=>{nowMatch=null;con(A)};
+}
+function eve(A){
+ const t=todayEv().map(e=>e.n);
+ A.innerHTML='<h2>Agenda de Porto Alegre</h2><div class="warn">Eventos fixos e de temporada. Datas mudam, então confirme antes de ir.</div>'
+ +EV.map(e=>'<div class="card"><b>'+E(e.n)+'</b> '+(t.includes(e.n)?'<span class="pill">hoje</span>':'')+'<div class="meta">🗓 '+E(e.h)+' • 📍 '+E(e.l)+'</div>'+E(e.t)+'</div>').join('')
+ +'<h2>Mais eventos</h2><div class="row"><a class="btn t" target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent('eventos em Porto Alegre esta semana')+'">Eventos desta semana</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent('agenda shows e teatro Porto Alegre')+'">Shows e teatro</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent('jogos Grêmio Inter Porto Alegre próximos')+'">Jogos</a></div>';
+}
+render();loadW();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script></body></html>
