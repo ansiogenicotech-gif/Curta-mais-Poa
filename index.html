@@ -2,7 +2,7 @@
 <html lang="pt-BR"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Curta+Poa</title>
-<meta name="theme-color" content="#060a22">
+<meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
@@ -68,6 +68,50 @@ nav button span{font-size:21px}nav button.on{color:var(--te);text-shadow:0 0 12p
 .vou{border:1px dashed var(--co);background:var(--cl);border-radius:14px;padding:12px;margin-top:10px;font-weight:700}
 .warn{background:rgba(255,193,94,.12);border:1px solid rgba(255,193,94,.4);color:#ffe2ac;border-radius:12px;padding:10px 12px;font-size:13px;font-weight:600;margin:10px 0}
 @media (prefers-reduced-motion:reduce){.sun{animation:none}*{transition:none!important}}
+body.ig{color:#262626;background:#fff;color-scheme:light}
+body.ig .hero{display:none}
+body.ig{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+body.ig main{max-width:470px;margin:0 auto}
+body.ig nav{background:rgba(255,255,255,.97);border:0;border-top:1px solid #dbdbdb;border-radius:0;left:0;right:0;bottom:0;max-width:470px;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:none}
+body.ig nav button{color:#737373}body.ig nav button.on{color:#262626;text-shadow:none}
+.top{position:sticky;top:0;z-index:8;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:calc(10px + env(safe-area-inset-top,0px)) 14px 8px;border-bottom:1px solid #efefef}
+.lg{font:italic 800 28px Georgia,"Times New Roman",serif;letter-spacing:-.5px;color:#262626}.lg b{background:linear-gradient(45deg,#fa7e1e,#d62976,#962fbf);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:32px}
+.ib{background:none;border:0;color:#262626;padding:4px;margin-left:10px;cursor:pointer}.ib:active{transform:scale(.9)}
+.st{display:flex;gap:14px;overflow-x:auto;padding:12px 14px;scrollbar-width:none;border-bottom:1px solid #efefef}.st::-webkit-scrollbar{display:none}
+.sb{flex:none;width:68px;text-align:center;background:none;border:0;font:inherit;font-size:12px;color:#262626;cursor:pointer}
+.rg{width:66px;height:66px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);display:flex;margin-bottom:4px}
+.sb.on .rg{background:#262626}
+.rg i{flex:1;border-radius:50%;border:3px solid #fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:26px;background:#f2f2f2}
+.fl{padding:8px 14px;font-size:13px;color:#737373;display:flex;justify-content:space-between}.fl button{border:0;background:none;color:#0095f6;font:inherit;font-weight:700;cursor:pointer}
+.po{background:#fff;border-bottom:1px solid #efefef;padding-bottom:10px}
+.po header{display:flex;align-items:center;gap:10px;padding:10px 14px}
+.po .av2{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex:none}
+.po header div{flex:1;line-height:1.2;font-size:14px}.po header small{display:block;color:#737373;font-size:12px}
+.tg{font-size:11px;font-weight:700;background:#f2f2f2;color:#262626;border-radius:999px;padding:3px 9px}.tg.h{background:#ffe3ea;color:#c2185b}
+.ph{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;user-select:none;-webkit-user-select:none}
+.ph>span{font-size:110px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}.ph img,.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph .bh{position:absolute;font-style:normal;font-size:96px;color:#fff;opacity:0;transform:scale(.4);pointer-events:none;text-shadow:0 4px 20px rgba(0,0,0,.35)}
+.ph .bh.go{animation:pop .8s ease}@keyframes pop{15%{opacity:1;transform:scale(1.15)}30%{transform:scale(.95)}70%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.1)}}
+.ac{display:flex;align-items:center;gap:4px;padding:8px 10px 2px}.ac button{background:none;border:0;color:#262626;padding:4px;cursor:pointer;display:flex}.ac button:active{transform:scale(.88)}
+.ac .lk.on{color:#ed4956}.ac .lk.on svg{fill:#ed4956}
+.wa{margin-left:auto;display:flex;align-items:center;gap:6px;background:#25d366;color:#fff!important;font-weight:800;font-size:13px;padding:8px 14px;border-radius:999px;text-decoration:none}
+.lc{padding:0 14px;font-weight:700;font-size:14px}.po p{padding:2px 14px 0;font-size:14px}.po p small{color:#737373;display:block;margin-top:3px}
+.po.ap{padding:14px}.po.ap .btn{background:#efefef;border:0;color:#262626}.po.ap .btn.p{background:#0095f6;color:#fff;box-shadow:none}
+.sv{position:fixed;inset:0;z-index:30;color:#fff;text-align:center;padding:calc(18px + env(safe-area-inset-top,0px)) 18px 30px;background:linear-gradient(180deg,#1d2b64,#f8cdda);overflow:auto}
+.sv .pg{height:3px;background:rgba(255,255,255,.35);border-radius:9px;overflow:hidden}.sv .pg i{display:block;height:100%;background:#fff;animation:pg 12s linear forwards}@keyframes pg{from{width:0}to{width:100%}}
+.sv .sh2{display:flex;justify-content:space-between;align-items:center;margin:14px 0 30px;font-weight:800}.sv .sh2 button{background:none;border:0;color:#fff;font-size:24px}
+.sv .bg{font-size:96px}.sv h1{font-size:64px;font-weight:300}.sv .fc2{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:26px}.sv .fc2 div{background:rgba(255,255,255,.18);border-radius:14px;padding:10px 4px;font-size:12px;font-weight:700}.sv .fc2 b{display:block;font-size:22px}
+.vs{position:fixed;left:0;right:0;bottom:0;max-width:470px;margin:0 auto;z-index:25;background:#fff;color:#262626;border-radius:20px 20px 0 0;box-shadow:0 -8px 40px rgba(0,0,0,.3);padding:14px 16px calc(18px + env(safe-area-inset-bottom,0px))}
+.vh{display:flex;justify-content:space-between;align-items:center}.vh button{background:none;border:0;font-size:20px;cursor:pointer}
+.vag{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.va{font:inherit;font-weight:800;border:2px solid #dbdbdb;background:#fafafa;border-radius:16px;padding:10px;cursor:pointer;color:#262626}.va.on{border-color:#d62976;background:#fff0f6}.va span{display:block;font-size:30px}.va small{display:block;font-weight:600;color:#737373}
+.vl{background:#f6f6f6;border-radius:14px;padding:10px 12px;font-size:14px;min-height:56px;white-space:pre-line}
+.vi{display:flex;gap:8px;margin-top:10px}.vi input{background:#fff;color:#262626;border:1px solid #dbdbdb}.vi button{border:0;background:#0095f6;color:#fff;border-radius:12px;padding:0 16px;font-size:18px}
+.vm{display:block;margin:12px auto 0;width:64px;height:64px;border-radius:50%;border:0;color:#fff;background:linear-gradient(45deg,#fa7e1e,#d62976,#962fbf);cursor:pointer}.vm.on{animation:pu 1s infinite}@keyframes pu{50%{box-shadow:0 0 0 14px rgba(214,41,118,.25)}}
+.lgi{height:40px;width:auto;display:block}
+.cr{display:flex;gap:8px;padding:6px 14px 0;align-items:center}.cr input{border:0;background:none;color:#262626;padding:6px 0;font-size:14px;border-bottom:1px solid #efefef;border-radius:0}.cr button{border:0;background:none;color:#0095f6;font:inherit;font-weight:700;cursor:pointer}
+.vc{border:0;background:none;color:#737373;font:inherit;font-size:14px;padding:4px 14px;cursor:pointer;display:block}.cm:not(.open) p:nth-last-child(n+3){display:none}.cm p{padding:1px 14px}
+.up{display:block;border:2px dashed #dbdbdb;border-radius:14px;padding:18px;text-align:center;font-weight:700;cursor:pointer;margin:12px 0}#up img,#up video{width:100%;max-height:220px;object-fit:contain;border-radius:12px;margin-bottom:8px}
 </style></head><body>
 <div class="hero"><svg class="orb" viewBox="0 0 320 260" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc15e"/><stop offset=".55" stop-color="#ff4f9a"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient><mask id="sm"><rect width="320" height="260" fill="#fff"/><rect y="140" width="320" height="4" fill="#000"/><rect y="158" width="320" height="6" fill="#000"/><rect y="178" width="320" height="8" fill="#000"/><rect y="200" width="320" height="11" fill="#000"/></mask></defs><circle class="sun" cx="190" cy="120" r="96" fill="url(#sg)" mask="url(#sm)"/><g stroke="#3de6ff" fill="none" stroke-width="1.5"><path opacity=".8" d="M0 220q40-10 80 0t80 0t80 0t80 0"/><path opacity=".5" d="M0 234q40-10 80 0t80 0t80 0t80 0"/><path opacity=".3" d="M0 248q40-10 80 0t80 0t80 0t80 0"/></g></svg><div class="w">
  <div class="logo">Curta<b>+</b>Poa</div>
@@ -133,7 +177,7 @@ const PERF=[
 {n:'Thiago',c:'Caxias do Sul',b:'Vim torcer e quero conhecer os estádios e a noite.',i:['Esportes','Noite','Culinária']}
 ];
 const PARC=['Café parceiro: 10% de desconto','Livraria parceira: brinde na compra','Restaurante parceiro: sobremesa cortesia','Bar parceiro: drink de boas-vindas','Loja parceira: 10% em artesanato'];
-let S={i:[],md:'d',n:1,t0:'09:00',t1:'22:00',b:3,c:'',nome:'',r:null,m:[],v:0};
+let S={i:[],md:'d',n:1,t0:'09:00',t1:'22:00',b:3,c:'',nome:'',r:null,m:[],v:0,lk:{},cm:{}};
 try{S={...S,...JSON.parse(localStorage.getItem('cmp2')||'{}')}}catch(e){}
 const save=()=>{try{localStorage.setItem('cmp2',JSON.stringify(S))}catch(e){}};
 let W=null,tab='home',deck=0,nowMatch=null;
@@ -148,16 +192,7 @@ function nav(){const T=[['home','🏠','Início'],['rot','🧭','Roteiro'],['mob
  $('nav').querySelectorAll('button').forEach(b=>b.onclick=()=>go(b.dataset.t))}
 const maps=(q,m)=>'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q+', Porto Alegre, RS')+(m?'&travelmode='+m:'');
 const todayEv=()=>{const d=new Date().getDay();return EV.filter(e=>e.d=='*'||(Array.isArray(e.d)&&e.d.includes(d)))};
-function render(){nav();const A=$('app');({home,rot,mob,con,eve})[tab](A)}
-function home(A){
- let f='';if(W&&W.daily)f='<h2>Previsão da semana</h2><div class="fc">'+W.daily.time.map((t,i)=>{const w=WC(W.daily.weather_code[i]);return '<div>'+DW[new Date(t+'T12:00').getDay()]+'<b>'+w[0]+'</b>'+Math.round(W.daily.temperature_2m_max[i])+'° / '+Math.round(W.daily.temperature_2m_min[i])+'°<br><small>💧'+W.daily.precipitation_probability_max[i]+'%</small></div>'}).join('')+'</div>';
- else f='<div class="warn">Previsão do tempo indisponível agora. Conecte-se à internet para ver o clima de Porto Alegre.</div>';
- A.innerHTML='<h2>Por onde começar?</h2><div class="card"><div class="row"><button class="btn p" data-g="rot">🧭 Montar meu roteiro</button><button class="btn t" data-g="con">💞 Achar companhia</button></div></div>'
- +'<div class="card"><b>Acabou de chegar?</b><div class="row" style="margin-top:10px"><button class="btn" data-c="aero">✈️ Aeroporto</button><button class="btn" data-c="rod">🚌 Rodoviária</button><button class="btn" data-c="cen">🏨 Já estou no Centro</button></div></div>'
- +'<h2>Acontece hoje</h2>'+todayEv().map(e=>'<div class="card"><b>'+E(e.n)+'</b><div class="meta">'+E(e.h)+' • '+E(e.l)+'</div>'+E(e.t)+'</div>').join('')+f;
- A.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>go(b.dataset.g));
- A.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.c=b.dataset.c;save();go('mob')});
-}
+function render(){nav();document.body.classList.toggle('ig',tab=='home');const m=document.querySelector('meta[name=theme-color]');m&&(m.content=tab=='home'?'#ffffff':'#060a22');const A=$('app');A.className=tab=='home'?'':'w';({home,rot,mob,con,eve})[tab](A)}
 const KL={m:'Manhã',l:'Almoço',a:'Tarde',n:'Noite'};
 const SL=t=>t<690?'m':t<870?'l':t<1110?'a':'n';
 const fmt=m=>{m=Math.round(m);return String(Math.floor(m/60)%24).padStart(2,'0')+':'+String(m%60).padStart(2,'0')};
@@ -212,10 +247,10 @@ function rot(A){
 }
 function mob(A){
  const tip={aero:'<b>✈️ Saindo do Aeroporto Salgado Filho</b><br>O Trensurb liga o aeroporto ao Centro (estação Mercado) em cerca de 20 a 25 minutos, com parada na Rodoviária. Táxi e apps também saem do desembarque.',rod:'<b>🚌 Saindo da Rodoviária</b><br>A estação do Trensurb fica perto e leva ao Centro em poucos minutos. Táxi e apps são alternativas, principalmente com bagagem.',cen:'<b>🏨 No Centro</b><br>Muitos pontos turísticos ficam a pé: Mercado Público, Praça da Alfândega, Usina do Gasômetro e Cais Mauá.'}[S.c]||'<b>Escolha de onde você sai</b> na aba Roteiro ou na tela inicial para ver dicas personalizadas.';
- const L=(u,e,t,s)=>'<a class="card" style="display:block;color:inherit;text-decoration:none" target="_blank" rel="noopener" href="'+u+'"><b>'+e+' '+t+'</b><div class="meta" style="margin:2px 0 0">'+s+'</div></a>';
+ const L=(u,e,t,s,k)=>'<a'+(k?' data-app="'+k+'"':'')+' class="card" style="display:block;color:inherit;text-decoration:none" target="_blank" rel="noopener" href="'+u+'"><b>'+e+' '+t+'</b><div class="meta" style="margin:2px 0 0">'+s+'</div></a>';
  A.innerHTML='<h2>Como se locomover</h2><div class="card" style="border-left:6px solid var(--co)">'+tip+'</div>'
  +'<h2>Traçar rota</h2><div class="card"><label class="l" style="margin-top:0">Para onde você vai?</label><select id="mD">'+Object.values(PM).map(p=>'<option value="'+E(p.n)+'">'+E(p.n)+'</option>').join('')+'</select><div class="row" style="margin-top:12px"><button class="btn t" data-m="driving">🚗 Carro/App</button><button class="btn t" data-m="transit">🚌 Ônibus/Trem</button><button class="btn t" data-m="walking">🚶 A pé</button><button class="btn t" data-m="bicycling">🚲 Bike</button></div></div>'
- +'<h2>Chamar transporte</h2>'+L('https://m.uber.com/','🚕','Uber','Abrir o app ou site')+L('https://99app.com/','🚖','99','Abrir o app ou site')+L('https://www.trensurb.gov.br/','🚆','Trensurb','Horários e estações')+L('https://eptc.portoalegre.rs.gov.br/','🚌','Ônibus e lotação (EPTC)','Informações oficiais de transporte')+L('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('patinete compartilhado Porto Alegre'),'🛴','Patinetes e bicicletas compartilhadas','Veja o que há perto de você no mapa');
+ +'<h2>Chamar transporte</h2>'+L('https://m.uber.com/','🚕','Uber','Abrir o app instalado','uber')+L('https://99app.com/','🚖','99','Abrir o app instalado','99')+L('https://www.ifood.com.br/','🍽️','iFood','Pedir comida no app instalado','ifood')+L('https://www.trensurb.gov.br/','🚆','Trensurb','Horários e estações')+L('https://eptc.portoalegre.rs.gov.br/','🚌','Ônibus e lotação (EPTC)','Informações oficiais de transporte')+L('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('patinete compartilhado Porto Alegre'),'🛴','Patinetes e bicicletas compartilhadas','Veja o que há perto de você no mapa');
  A.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>open(maps($('mD').value,b.dataset.m),'_blank'));
 }
 function common(a,b){return a.filter(x=>b.includes(x))}
@@ -241,6 +276,139 @@ function eve(A){
  +EV.map(e=>'<div class="card"><b>'+E(e.n)+'</b> '+(t.includes(e.n)?'<span class="pill">hoje</span>':'')+'<div class="meta">🗓 '+E(e.h)+' • 📍 '+E(e.l)+'</div>'+E(e.t)+'</div>').join('')
  +'<h2>Mais eventos</h2><div class="row"><a class="btn t" target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent('eventos em Porto Alegre esta semana')+'">Eventos desta semana</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent('agenda shows e teatro Porto Alegre')+'">Shows e teatro</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/search?q='+encodeURIComponent('jogos Grêmio Inter Porto Alegre próximos')+'">Jogos</a></div>';
 }
+// ===== FEED (edite aqui: wa = WhatsApp com 55+DDD, img = URL da foto opcional, d = dias da semana ou '*') =====
+const FEED=[
+{id:'f1',t:'e',n:'Café do Mercado (exemplo)',b:'Centro',em:'☕',g:['#f6d365','#fda085'],tx:'Café coado na hora e pão de queijo quentinho. Mostre o Curta+Poa e ganhe 10% de desconto.',wa:'5551999990001',tag:'Parceiro',d:null},
+{id:'f2',t:'v',n:'Pôr do sol no Guaíba',b:'Usina do Gasômetro',em:'🌇',g:['#ff9a9e','#6a5acd'],tx:'Um dos programas mais tradicionais da cidade. Chegue 30 minutos antes e leve o chimarrão.',tag:'Hoje',d:'*',pl:'Usina do Gasômetro'},
+{id:'f3',t:'e',n:'Churrascaria Gaúcha (exemplo)',b:'Cidade Baixa',em:'🥩',g:['#c31432','#240b36'],tx:'Rodízio completo com cortes nobres. Sobremesa cortesia para quem vier pelo Curta+Poa.',wa:'5551999990002',tag:'Parceiro',d:null},
+{id:'f4',t:'v',n:'Brique da Redenção',b:'Parque Farroupilha',em:'🛍️',g:['#a8e063','#56ab2f'],tx:'Antiguidades, artesanato e comidinhas todo domingo de manhã.',tag:'Domingo',d:[0],pl:'Parque Farroupilha'},
+{id:'f5',t:'e',n:'Livraria da Praça (exemplo)',b:'Praça da Alfândega',em:'📚',g:['#89f7fe','#66a6ff'],tx:'Livros gaúchos, autores locais e café. Brinde na compra para quem mostrar este post.',wa:'5551999990003',tag:'Parceiro',d:null},
+{id:'f6',t:'v',n:'Bares e música na Cidade Baixa',b:'Cidade Baixa',em:'🎶',g:['#8e2de2','#f857a6'],tx:'Rodas de samba, rock e bares lotados de quinta a sábado.',tag:'Qui a Sáb',d:[4,5,6],pl:'Bares da Cidade Baixa'},
+{id:'f7',t:'e',n:'Bar do Bom Fim (exemplo)',b:'Bom Fim',em:'🍻',g:['#f7971e','#ffd200'],tx:'Música ao vivo e drink de boas-vindas para quem chegar pelo Curta+Poa.',wa:'5551999990004',tag:'Parceiro',d:null},
+{id:'f8',t:'v',n:'Theatro São Pedro',b:'Centro',em:'🎭',g:['#614385','#516395'],tx:'Orquestra, ópera e teatro em um prédio histórico. Confira a programação antes de ir.',tag:'Temporada',d:null,pl:'Theatro São Pedro'},
+{id:'f9',t:'e',n:'Ateliê Artesanato Sul (exemplo)',b:'Moinhos de Vento',em:'🧺',g:['#ffecd2','#fcb69f'],tx:'Peças feitas à mão por artesãos gaúchos. 10% de desconto no artesanato.',wa:'5551999990005',tag:'Parceiro',d:null},
+{id:'f10',t:'v',n:'Feira Ecológica da Redenção',b:'Av. José Bonifácio',em:'🥬',g:['#76b852','#8dc26f'],tx:'Orgânicos, pães e produtos coloniais todo sábado de manhã.',tag:'Sábado',d:[6],pl:'Parque Farroupilha'},
+{id:'f11',t:'v',n:'Feira do Livro de Porto Alegre',b:'Praça da Alfândega',em:'📖',g:['#43cea2','#185a9d'],tx:'Evento tradicional, geralmente entre fim de outubro e novembro. Confirme as datas deste ano.',tag:'Temporada',d:null,pl:'Praça da Alfândega'}
+];
+const IC={
+heart:'<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21C5 16.5 2 12.6 2 8.8 2 6.1 4 4 6.6 4c1.9 0 3.7 1 5.4 3 1.7-2 3.5-3 5.4-3C20 4 22 6.1 22 8.8c0 3.8-3 7.7-10 12.2z"/></svg>',
+send:'<svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><line x1="22" y1="3" x2="11" y2="13"/><polygon points="22 3 15 22 11 13 2 9 22 3"/></svg>',
+pin:'<svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+mic:'<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>',
+wa:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"/></svg>'};
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const cl=n=>n.replace(' (exemplo)','');
+const hh=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
+const waU=f=>'https://wa.me/'+f.wa+'?text='+encodeURIComponent('Olá! Vi o '+cl(f.n)+' no Curta+Poa e quero saber mais.');
+let flt='all';
+const isHoje=f=>{const d=new Date().getDay();return f.d=='*'||(Array.isArray(f.d)&&f.d.includes(d))};
+function home(A){
+ const wc=W&&W.current?WC(W.current.weather_code):null;
+ const sts=[['clima',wc?wc[0]:'🌤️','Clima'],['gau','👩','Gau'],['derio','👨','Dério'],['hoje','📅','Hoje'],['e','🏪','Parceiros'],['v','🎭','Eventos']];
+ const L=ALL().filter(f=>flt=='all'||(flt=='hoje'?isHoje(f):f.t==flt));
+ A.innerHTML='<div class="top"><img class="lgi" src="logo.png" alt="Curta+Poa"><div><button class="ib" id="bUp" aria-label="Nova publicação">'+IC.plus+'</button><button class="ib" id="bMic" aria-label="Comando de voz">'+IC.mic+'</button><button class="ib" id="bPl" aria-label="Compartilhar app">'+IC.send+'</button></div></div>'
+ +'<div class="st">'+sts.map(s=>'<button class="sb'+(flt==s[0]?' on':'')+'" data-s="'+s[0]+'"><div class="rg"><i>'+s[1]+'</i></div>'+s[2]+(s[0]=='clima'&&W&&W.current?' '+Math.round(W.current.temperature_2m)+'°':'')+'</button>').join('')+'</div>'
+ +(flt!='all'?'<div class="fl"><span>Filtro: '+({hoje:'acontece hoje',e:'empresas parceiras',v:'eventos'})[flt]+'</span><button data-s="'+flt+'">Limpar</button></div>':'')
+ +'<div class="po ap"><b>Por onde começar?</b><div class="row" style="margin:10px 0"><button class="btn p" data-g="rot">🧭 Montar meu roteiro</button><button class="btn" data-g="con">💞 Achar companhia</button></div><div class="row"><button class="btn s" data-c="aero">✈️ Aeroporto</button><button class="btn s" data-c="rod">🚌 Rodoviária</button><button class="btn s" data-c="cen">🏨 Centro</button></div></div>'
+ +(L.length?L.map(postH).join(''):'<div class="po ap">Nada por aqui hoje. Toque em Limpar para ver tudo.</div>');
+ A.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>go(b.dataset.g));
+ A.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{S.c=b.dataset.c;save();go('mob')});
+ A.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{const k=b.dataset.s;if(k=='clima')showW();else if(k=='gau'||k=='derio')openVoice(k);else{flt=flt==k?'all':k;home(A)}});
+ A.querySelectorAll('[data-lk]').forEach(b=>b.onclick=()=>like(b.dataset.lk));
+ A.querySelectorAll('.ph').forEach(p=>{let t=0;p.onclick=()=>{const n=Date.now();if(n-t<320){const f=ALL().find(x=>x.id==p.dataset.d);if(!S.lk[f.id])like(f.id);const h=p.querySelector('.bh');h.classList.remove('go');void h.offsetWidth;h.classList.add('go')}t=n}});
+ A.querySelectorAll('[data-sh]').forEach(b=>b.onclick=()=>{const f=ALL().find(x=>x.id==b.dataset.sh);shr({title:cl(f.n),text:cl(f.n)+' - '+f.tx,url:location.href.split('#')[0]})});
+ A.querySelectorAll('[data-mp]').forEach(b=>b.onclick=()=>open(maps(b.dataset.mp),'_blank'));
+ wire(A);$('bUp').onclick=openUp;$('bMic').onclick=()=>openVoice(ag||'gau');$('bPl').onclick=()=>shr({title:'Curta+Poa',text:'Porto Alegre, no seu tempo.',url:location.href.split('#')[0]});
+}
+function like(id){const f=ALL().find(x=>x.id==id);S.lk[id]=S.lk[id]?0:1;save();const b=document.querySelector('[data-lk="'+id+'"]');if(b)b.classList.toggle('on',!!S.lk[id]);const n=$('n'+id);if(n)n.textContent=(40+hh(id)%460+(S.lk[id]?1:0))+' curtidas'}
+async function shr(d){try{if(navigator.share)await navigator.share(d);else{await navigator.clipboard.writeText((d.text||'')+' '+(d.url||''));alert('Copiado!')}}catch(e){}}
+function showW(){const o0=$('sv');if(o0)o0.remove();const o=document.createElement('div');o.id='sv';o.className='sv';let b;
+ if(W&&W.current){const w=WC(W.current.weather_code),ss=(W.daily.sunset[0]||'').slice(11,16);b='<div class="bg">'+w[0]+'</div><h1>'+Math.round(W.current.temperature_2m)+'°C</h1><p>'+w[1]+' em Porto Alegre</p>'+(ss?'<p>🌇 Pôr do sol às '+ss+'</p>':'')
+  +'<div class="fc2">'+W.daily.time.slice(0,7).map((t,i)=>{const x=WC(W.daily.weather_code[i]);return '<div>'+DW[new Date(t+'T12:00').getDay()]+'<b>'+x[0]+'</b>'+Math.round(W.daily.temperature_2m_max[i])+'°/'+Math.round(W.daily.temperature_2m_min[i])+'°<br>💧'+W.daily.precipitation_probability_max[i]+'%</div>'}).join('')+'</div>'}
+ else b='<p>Previsão indisponível agora. Conecte-se à internet.</p>';
+ o.innerHTML='<div class="pg"><i></i></div><div class="sh2"><span>⛅ Clima em Porto Alegre</span><button id="xs" aria-label="Fechar">✕</button></div>'+b;document.body.appendChild(o);
+ const c=()=>o.remove();$('xs').onclick=c;o.querySelector('.pg i').addEventListener('animationend',c)}
+// ===== APPS INSTALADOS (deep links) =====
+const APPS={uber:{web:'https://m.uber.com/ul/?action=setPickup&pickup=my_location',pkg:'com.ubercab',sch:'uber'},'99':{web:'https://99app.com/',pkg:'com.taxis99',sch:'taxis99'},ifood:{web:'https://www.ifood.com.br/',pkg:'br.com.brainweb.ifood',sch:'ifood'}};
+function openApp(k,dest){const a=APPS[k];if(!a)return;let web=a.web;if(k=='uber'&&dest)web+='&dropoff[formatted_address]='+encodeURIComponent(dest+', Porto Alegre, RS');
+ const ua=navigator.userAgent;
+ if(/Android/i.test(ua)){location.href='intent://'+(k=='uber'?'?action=setPickup&pickup=my_location':'')+'#Intent;scheme='+a.sch+';package='+a.pkg+';S.browser_fallback_url='+encodeURIComponent(web)+';end'}
+ else if(/iPhone|iPad|iPod/i.test(ua)){if(k=='uber')location.href=web;else{const t=setTimeout(()=>{if(!document.hidden)location.href=web},1200);location.href=a.sch+'://';document.addEventListener('visibilitychange',()=>clearTimeout(t),{once:true})}}
+ else open(web,'_blank')}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-app]');if(a){e.preventDefault();openApp(a.dataset.app)}});
+// ===== VOZ: Gau (feminina) e Dério (masculino) =====
+const VZ={gau:{n:'Gau',e:'👩',d:'voz feminina',p:1.25,h:['luciana','francisca','maria','fernanda','vitoria','female','feminina']},derio:{n:'Dério',e:'👨',d:'voz masculina',p:.7,h:['daniel','felipe','ricardo','antonio','male','masculin']}};
+let ag=null,rec=null,lis=false,vmsg='';
+try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
+function pick(k){try{const vs=speechSynthesis.getVoices().filter(v=>/^pt/i.test(v.lang)),o=k=='gau'?'derio':'gau',has=(v,h)=>h.some(x=>v.name.toLowerCase().includes(x));return vs.find(v=>has(v,VZ[k].h))||vs.find(v=>!has(v,VZ[o].h))||vs[0]}catch(e){}}
+function speakT(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t),a=VZ[ag||'gau'];u.lang='pt-BR';u.pitch=a.p;const v=pick(ag||'gau');if(v){u.voice=v;u.lang=v.lang}speechSynthesis.speak(u)}catch(e){}}
+function openVoice(k){ag=k;let s=$('vs');if(!s){s=document.createElement('div');s.id='vs';s.className='vs';document.body.appendChild(s)}vmsg='';vR();speakT('Oi, eu sou '+(k=='gau'?'a Gau':'o Dério')+'. Como posso ajudar?');vmsg=VZ[k].n+': Oi! Como posso ajudar? Toque no microfone e diga, por exemplo: "montar roteiro de 4 horas", "como está o clima", "chamar Uber para o Mercado Público", "eventos de hoje".';vR()}
+function vR(){const s=$('vs');if(!s)return;s.innerHTML='<div class="vh"><b>Converse por voz</b><button id="vx" aria-label="Fechar">✕</button></div><div class="vag">'+['gau','derio'].map(k=>'<button class="va'+(ag==k?' on':'')+'" data-a="'+k+'"><span>'+VZ[k].e+'</span>'+VZ[k].n+'<small>'+VZ[k].d+'</small></button>').join('')+'</div><div class="vl">'+E(vmsg||'Escolha com quem falar.')+'</div><div class="vi"><input id="vt" placeholder="ou digite o comando"><button id="vgo" aria-label="Enviar">➤</button></div><button class="vm'+(lis?' on':'')+'" id="vmic" aria-label="Falar">'+IC.mic+'</button>';
+ $('vx').onclick=()=>{try{speechSynthesis.cancel();rec&&rec.stop()}catch(e){}s.remove()};
+ s.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>openVoice(b.dataset.a));
+ $('vmic').onclick=listen;const go2=()=>{const v=$('vt').value.trim();if(v)run(v)};$('vgo').onclick=go2;$('vt').onkeydown=e=>{if(e.key=='Enter')go2()}}
+function listen(){const R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){vmsg='Este navegador não tem reconhecimento de voz. Digite o comando abaixo (no Android use o Chrome).';vR();return}
+ try{speechSynthesis.cancel()}catch(e){}
+ rec=new R();rec.lang='pt-BR';rec.interimResults=false;lis=true;vmsg='🎙️ Ouvindo...';vR();
+ rec.onresult=e=>run(e.results[0][0].transcript);
+ rec.onerror=()=>{lis=false;vmsg='Não consegui ouvir. Verifique a permissão do microfone ou digite o comando.';vR()};
+ rec.onend=()=>{if(lis){lis=false;vR()}};
+ try{rec.start()}catch(e){lis=false;vR()}}
+function run(t){lis=false;const r=cmd(norm(t));vmsg='Você: '+t+'\n'+VZ[ag||'gau'].n+': '+r;vR();speakT(r)}
+const NW={um:1,uma:1,dois:2,duas:2,tres:3,quatro:4,cinco:5,seis:6,sete:7,oito:8,nove:9,dez:10,doze:12};
+const STOP=['parque','praca','museu','cultura','centro','rua','bares','casa','grande','exemplo','porto','alegre','gaucha','gaucho'];
+function findBy(q,list,nm){let best=null,bs=0;list.forEach(x=>{const s=norm(nm(x)).split(/[^a-z0-9]+/).filter(t=>t.length>3&&!STOP.includes(t)).filter(t=>q.includes(t)).length;if(s>bs){bs=s;best=x}});return best}
+function cmd(q){const has=(...w)=>w.some(x=>q.includes(x)),dest=findBy(q,Object.values(PM),p=>p.n);
+ if(has('uber','99','ifood')){const k=has('uber')?'uber':has('ifood')?'ifood':'99';openApp(k,dest&&dest.n);return 'Abrindo '+({uber:'o Uber',ifood:'o iFood','99':'o 99'})[k]+(dest&&k!='ifood'?' com destino '+dest.n:'')+'.'}
+ if(has('whatsapp','zap','mensagem')){const f=findBy(q,FEED,x=>x.n);if(f&&f.wa){location.href=waU(f);return 'Abrindo o WhatsApp de '+cl(f.n)+'.'}return 'De qual empresa? Diga, por exemplo: WhatsApp do café do mercado.'}
+ if(has('curti','like','coracao')){const f=findBy(q,FEED,x=>x.n);if(f){S.lk[f.id]=1;save();if(tab=='home')render();return 'Curti o post de '+cl(f.n)+'.'}return 'Qual post você quer curtir? Diga o nome da empresa ou do evento.'}
+ if(has('roteiro','montar','planej','passeio')){const m=q.match(/(\d+|um|uma|dois|duas|tres|quatro|cinco|seis|sete|oito|nove|dez|doze)\s*(hora|h\b|dia)/);
+  if(m){S.md=m[2][0]=='h'?'h':'d';S.n=Math.max(1,Math.min(MX(),+m[1]||NW[m[1]]))}
+  const f=INT.filter(i=>q.includes(norm(i).slice(0,5)));if(f.length)S.i=f;if(has('gratis','gratuito'))S.b=0;
+  gen();go('rot');const it=S.r.days[0].it.slice(0,3).map(x=>PM[x.id].n);return it.length?'Pronto! Montei seu roteiro de '+S.n+' '+unit()+', está na aba Roteiro. Começa por '+it.join(', ')+'.':'Esse tempo é curto demais. Tente mais horas ou dias.'}
+ if(has('clima','previsao','chuva','chover','temperatura','calor','frio','tempo hoje')){showW();if(!W||!W.current)return 'Não consegui carregar o clima agora.';const w=WC(W.current.weather_code),d=W.daily;return 'Agora em Porto Alegre: '+Math.round(W.current.temperature_2m)+' graus, '+w[1].toLowerCase()+'. Hoje, máxima de '+Math.round(d.temperature_2m_max[0])+' e mínima de '+Math.round(d.temperature_2m_min[0])+', com '+d.precipitation_probability_max[0]+'% de chance de chuva.'}
+ if(has('evento','acontece','agenda','programacao','show')){const t=todayEv().map(e=>e.n);go('eve');return t.length?'Hoje tem: '+t.join(', ')+'.':'Não há eventos fixos hoje. Veja a agenda na tela.'}
+ if(has('como chegar','rota','ir para','ir ao','levar','navegar','mapa')){if(dest){location.href=maps(dest.n,'driving');return 'Abrindo a rota para '+dest.n+'.'}return 'Para onde você quer ir?'}
+ if(has('compartilh')&&S.r){shr({text:shareTxt()});return 'Compartilhando seu roteiro.'}
+ if(has('inicio','feed','home')){go('home');return 'Aqui está o início.'}
+ if(has('conectar','companhia','match')){go('con');return 'Abrindo a aba Conectar.'}
+ if(has('mobilidade','transporte','onibus','trensurb')){go('mob');return 'Abrindo Mobilidade.'}
+ return 'Posso montar roteiro, ver o clima, mostrar eventos, abrir Uber, 99 ou iFood, traçar rota, curtir posts e abrir o WhatsApp das empresas. O que você quer?'}
+
+IC.plus='<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>';
+IC.cm=IC.wa.replace('width="18" height="18"','width="25" height="25"');
+// ===== PUBLICAÇÕES DO USUÁRIO (fotos e vídeos guardados neste aparelho) =====
+const DB=()=>new Promise((r,j)=>{const q=indexedDB.open('cmp',1);q.onupgradeneeded=()=>q.result.createObjectStore('p',{keyPath:'id'});q.onsuccess=()=>r(q.result);q.onerror=()=>j(q.error)});
+const dbAll=async()=>{try{const d=await DB();return await new Promise(r=>{const q=d.transaction('p').objectStore('p').getAll();q.onsuccess=()=>r(q.result);q.onerror=()=>r([])})}catch(e){return[]}};
+const dbPut=async o=>{const d=await DB();return new Promise((r,j)=>{const t=d.transaction('p','readwrite');t.objectStore('p').put(o);t.oncomplete=r;t.onerror=()=>j(t.error)})};
+const dbDel=async id=>{try{const d=await DB();return await new Promise(r=>{const t=d.transaction('p','readwrite');t.objectStore('p').delete(id);t.oncomplete=r;t.onerror=r})}catch(e){}};
+let UP=[];const ALL=()=>UP.concat(FEED);
+async function loadUP(){UP=(await dbAll()).sort((a,b)=>b.ts-a.ts).map(x=>({id:x.id,t:'u',n:x.n,b:'Comunidade',em:'📸',g:['#833ab4','#fd1d1d'],tx:x.tx,tag:'Comunidade',d:null,mine:1,vid:x.vid,src:x.vid?URL.createObjectURL(x.blob):null,img:x.vid?null:URL.createObjectURL(x.blob)}));if(tab=='home')render()}
+const shrink=f=>new Promise(r=>{const i=new Image();i.onload=()=>{const k=Math.min(1,1080/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);c.toBlob(b=>r(b||f),'image/jpeg',.85)};i.onerror=()=>r(f);i.src=URL.createObjectURL(f)});
+function openUp(){const o=$('vs');if(o)o.remove();const s=document.createElement('div');s.id='vs';s.className='vs';document.body.appendChild(s);let file=null;
+ s.innerHTML='<div class="vh"><b>Nova publicação</b><button id="ux" aria-label="Fechar">✕</button></div><label class="up" for="uf">📷 Escolher foto ou vídeo</label><input type="file" id="uf" accept="image/*,video/*" hidden><div id="up"></div><input id="ut" placeholder="Escreva uma legenda..." maxlength="200"><button class="btn p" id="ug" style="width:100%;margin-top:10px">Publicar</button><div class="meta" style="margin-top:8px">Por enquanto sua publicação aparece só neste aparelho. Vídeos até 60 MB.</div>';
+ $('ux').onclick=()=>s.remove();
+ $('uf').onchange=e=>{file=e.target.files[0];if(!file)return;const u=URL.createObjectURL(file);$('up').innerHTML=file.type.startsWith('video')?'<video src="'+u+'" controls playsinline></video>':'<img src="'+u+'" alt="">'};
+ $('ug').onclick=async()=>{if(!file){alert('Escolha uma foto ou vídeo.');return}const vid=file.type.startsWith('video');if(vid&&file.size>60e6){alert('Vídeo muito grande (máximo 60 MB).');return}
+  $('ug').disabled=true;$('ug').textContent='Publicando...';try{const blob=vid?file:await shrink(file);await dbPut({id:'u'+Date.now(),n:S.nome||'Você',tx:$('ut').value.trim(),vid,blob,ts:Date.now()});s.remove();flt='all';await loadUP()}catch(e){alert('Não foi possível salvar neste aparelho.');$('ug').disabled=false;$('ug').textContent='Publicar'}}}
+// ===== COMENTÁRIOS (guardados neste aparelho) =====
+const cbH=id=>{const l=S.cm[id]||[];return(l.length>2?'<button class="vc" data-cv="'+id+'">Ver todos os '+l.length+' comentários</button>':'')+'<div class="cm" id="c'+id+'">'+l.map(c=>'<p><b>'+E(c.u)+'</b> '+E(c.t)+'</p>').join('')+'</div>'};
+function wire(A){
+ A.querySelectorAll('[data-cp]').forEach(b=>b.onclick=()=>cpost(b.dataset.cp));
+ A.querySelectorAll('.cr input').forEach(i=>i.onkeydown=e=>{if(e.key=='Enter')cpost(i.dataset.i)});
+ A.querySelectorAll('[data-cv]').forEach(b=>b.onclick=()=>{const c=$('c'+b.dataset.cv),o=c.classList.toggle('open');b.textContent=o?'Ocultar comentários':'Ver todos os '+(S.cm[b.dataset.cv]||[]).length+' comentários'});
+ A.querySelectorAll('[data-cf]').forEach(b=>b.onclick=()=>{const i=$('ci'+b.dataset.cf);i.scrollIntoView({block:'center'});i.focus()});
+ A.querySelectorAll('[data-del]').forEach(b=>b.onclick=async()=>{if(confirm('Excluir esta publicação?')){await dbDel(b.dataset.del);loadUP()}})}
+function cpost(id){const i=$('ci'+id),t=i.value.trim();if(!t)return;(S.cm[id]=S.cm[id]||[]).push({u:S.nome||'Você',t});save();i.value='';const b=$('cb'+id);b.innerHTML=cbH(id);wire(b)}
+function postH(f){const on=!!S.lk[f.id],n=(f.t=='u'?0:40+hh(f.id)%460)+(on?1:0),g='linear-gradient('+f.g[0]+','+f.g[1]+')';
+ return '<article class="po"><header><div class="av2" style="background:'+g+'">'+f.em+'</div><div><b>'+E(cl(f.n))+'</b><small>📍 '+E(f.b)+'</small></div>'+(f.mine?'<button class="tg h" data-del="'+f.id+'">Excluir</button>':'<span class="tg'+(f.t=='v'?' h':'')+'">'+E(f.tag)+'</span>')+'</header>'
+ +'<div class="ph" data-d="'+f.id+'" style="background:'+g+'">'+(f.src?'<video src="'+f.src+'" controls playsinline preload="metadata"></video>':f.img?'<img src="'+E(f.img)+'" loading="lazy" alt="">':'<span>'+f.em+'</span>')+'<i class="bh">❤</i></div>'
+ +'<div class="ac"><button class="lk'+(on?' on':'')+'" data-lk="'+f.id+'" aria-label="Curtir">'+IC.heart+'</button><button data-cf="'+f.id+'" aria-label="Comentar">'+IC.cm+'</button><button data-sh="'+f.id+'" aria-label="Compartilhar">'+IC.send+'</button>'+(f.t=='u'?'':'<button data-mp="'+E(f.pl||cl(f.n)+' '+f.b)+'" aria-label="Como chegar">'+IC.pin+'</button>')
+ +(f.wa?'<a class="wa" target="_blank" rel="noopener" href="'+waU(f)+'">'+IC.wa+' WhatsApp</a>':'')+'</div>'
+ +'<div class="lc" id="n'+f.id+'">'+n+' curtidas</div><p><b>'+E(cl(f.n))+'</b> '+E(f.tx||'')+(f.wa?'<small>Contato de exemplo: troque pelo WhatsApp real da empresa.</small>':'')+'</p>'
+ +'<div id="cb'+f.id+'">'+cbH(f.id)+'</div><div class="cr"><input id="ci'+f.id+'" data-i="'+f.id+'" placeholder="Adicione um comentário..." maxlength="300"><button data-cp="'+f.id+'">Publicar</button></div></article>'}
+loadUP();
+
 render();loadW();
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script></body></html>
